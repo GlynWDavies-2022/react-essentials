@@ -1,11 +1,11 @@
-function CoreConcept(props) {
+function CoreConcept({img, title, description}) {
     return (
         <li>
-           <img src={props.img} alt="A nice components picture" />
-           <h3>{props.title}</h3>
-           <p>{props.description}</p> 
+           <img src={img} alt="A nice components picture" />
+           <h3>{title}</h3>
+           <p>{description}</p> 
         </li>
     )
 }
 
-export default CoreConcept
+export default CoreConcept;

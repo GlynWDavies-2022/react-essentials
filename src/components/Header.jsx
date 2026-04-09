@@ -1,3 +1,9 @@
+// [N] If you are 'pushing' styles, you only have to import the CSS file itself
+// [N] If you are pulling styles, you have to do a named import of the CSS module object and then use that object to access the styles:
+// [E] import styles from './Header.module.css'; and then use styles.header, styles.title, etc. in the JSX
+
+import './Header.module.css';
+
 function Header() {
 
     const keywords = ['Core', 'Crucial', 'Vital', 'Key', 'Important', 'Essential', 'Fundamental', 'Critical', 'Necessary', 'Indispensable'];
