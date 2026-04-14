@@ -14,7 +14,11 @@ function App() {
     setSelectedTopic(selectedButton);
   }
 
-  const { title, description, code } = EXAMPLES[selectedTopic] || {};
+  function setIsSelected(id) {
+    return id === selectedTopic;
+  }
+
+  const { title, description, code } = EXAMPLES[selectedTopic];
 
   return (
     <div>
@@ -27,10 +31,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton id="components" onSelect={() => handleSelect('components')}>Components</TabButton>
-            <TabButton id="jsx" onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-            <TabButton id="props" onSelect={() => handleSelect('props')}>Props</TabButton>
-            <TabButton id="state" onSelect={() => handleSelect('state')}>State</TabButton>
+            <TabButton onSelect={() => handleSelect('components')} isSelected={setIsSelected('components')}>Components</TabButton>
+            <TabButton onSelect={() => handleSelect('jsx')} isSelected={setIsSelected('jsx')}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect('props')} isSelected={setIsSelected('props')}>Props</TabButton>
+            <TabButton onSelect={() => handleSelect('state')} isSelected={setIsSelected('state')}>State</TabButton>
           </menu>
           <div id="tab-content">
             <h3>{title}</h3>
