@@ -4,6 +4,8 @@ import { CORE_CONCEPTS } from '../data/data';
 
 function CoreConcepts() {
     return (
+        <section id="core-concepts">
+        <h2>Core Concepts</h2>
         <ul>
             {CORE_CONCEPTS.map((concept) => (
               <CoreConcept
@@ -13,7 +15,8 @@ function CoreConcepts() {
                 img={concept.image}
               />
             ))}
-          </ul>
+        </ul>
+        </section>
     )
 }
 
